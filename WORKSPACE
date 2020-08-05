@@ -16,6 +16,13 @@ http_archive(
 )
 
 http_archive(
+    name = "com_github_gflags_gflags",
+    sha256 = "34af2f15cf7367513b352bdcd2493ab14ce43692d2dcd9dfc499492966c64dcf",
+    strip_prefix = "gflags-2.2.2",
+    urls = ["https://github.com/gflags/gflags/archive/v2.2.2.tar.gz"],  # 2018-11-12
+)
+
+http_archive(
     name = "com_google_googletest",
     strip_prefix = "googletest-3f0cf6b62ad1eb50d8736538363d3580dd640c3e",
     urls = ["https://github.com/google/googletest/archive/3f0cf6b62ad1eb50d8736538363d3580dd640c3e.zip"],
@@ -34,4 +41,3 @@ new_local_repository(
     build_file = "@//bindings/python:python_headers.BUILD",
     path = "/usr/include/python3.6",  # May be overwritten by setup.py.
 )
-
